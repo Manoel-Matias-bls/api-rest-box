@@ -46,4 +46,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 app.use(require('./routes'));
 
 //determina qual porta possibilitará acesso à aplicação no localhost
-server.listen(3334);
+server.listen(process.env.PORT || 3334);
