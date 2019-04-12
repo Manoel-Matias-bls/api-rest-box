@@ -15,12 +15,12 @@ const File = new mongoose.Schema(
     {
         timestamps: true, //cria os created_at e update_at
         toObject: {virtuals: true},
-        toJson: {virtuals: true}
+        toJSON: {virtuals: true}
     }
 );
 
 File.virtual('url').get(function(){
-    const url = process.env.URL || 'http://localhost:3334'
+    const url = process.env.URL || 'http://localhost:3333'
     return `${url}/files/${encodeURIComponent(this.path)}`;
 })
 

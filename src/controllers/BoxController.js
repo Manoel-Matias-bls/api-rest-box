@@ -4,7 +4,7 @@ class BoxController {
     //async await: para requisições assincronas no node
     //método store cria uma pasta para arquivos (Create do CRUD)
     async store (req, res){
-        //persistindo daddos da GUI no BD
+        //persistindo dados da GUI no BD
         const box = await Box.create(req.body);
         
         //resposta para frontend será em formato json

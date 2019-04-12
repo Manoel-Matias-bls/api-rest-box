@@ -20,7 +20,7 @@ module.exports = {
 
                 //do contrário cria o hash add hifen e o nome original
                 //ex: asd897asd...-print.jpg
-                file.key = `$hash.toString('hex')}-${file.originalname}`;
+                file.key = `${hash.toString('hex')}-${file.originalname}`;
 
                 cb(null, file.key);
             })
